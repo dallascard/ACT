@@ -1,4 +1,4 @@
-#ACT: Averaging Classifiers for Text
+# ACT: Averaging Classifiers for Text
 
 This is a preliminary repo for classifiers restricted to make predictions in terms of a weighted average of training data, specifically for text datasets.
 
