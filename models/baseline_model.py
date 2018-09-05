@@ -103,7 +103,6 @@ class BaselineModel(nn.Module):
         elif self.base_model == 'lstm':
             x, final = self.lstm_layer(x)
 
-        #alpha = F.softmax(self.attn_layer(x).mul_(padding_mask), dim=1)
         a = self.attn_layer(x).exp().mul(padding_mask)
         an = a.sum(dim=1).pow(-1).view([batch_size, 1, 1])
         alpha = torch.bmm(a, an)
