@@ -239,7 +239,7 @@ def train(args, model, train_loader, dev_loader, test_loader, ref_loader, ood_lo
         if epochs_without_improvement > args.patience:
             print("Patience exceeded; exiting training\n")
             done = True
-        elif epoch > args.max_epochs:
+        elif epoch >= args.max_epochs:
             print("Max epochs exceeded; exiting training\n")
             done = True
 

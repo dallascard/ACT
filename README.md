@@ -27,11 +27,11 @@ This will download the dataset to `data/stackoverflow/raw`, preprocess it, train
 
 The output directory will contain files for the train, dev, and test data, each of which is .npz file containing labels, predictions, and predicted probabilities.
 
-To train a weighted averaging model, use `--model act`
+To train a weighted averaging model, add `--model act`
 
 ### Custom datasets:
 
-To train a model on a dataset that has not been prespecified, create a directory called `data/[name]/raw/`, where `[name]` is the name of your dataset. In that directory, created files called `train.jsonlist` and `test.jsonlist`. Each of those files should contain one document per line. Each line should be a JSON object with at least two fields: "text" and "label".
+To train a model on a dataset that has not been prespecified, create a directory called `data/[name]/raw/`, where `[name]` is the name of your dataset. In that directory, create files called `train.jsonlist` and `test.jsonlist`. Each of those files should contain one document per line. Each line should be a JSON object with at least two fields: "text" and "label".
 
 For example, the first line of a file could be the following JSON object:
 `{"text": "This is a positive document", "label": "positive"}`
